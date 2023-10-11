@@ -1,0 +1,42 @@
+.card{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 620px;
+    height: 60px;
+    background: rgb(86, 86, 225);
+    margin: 10px 0px 10px 0px;
+    border-radius: 10px;
+}
+
+#card-logo{
+    width: 30px;
+    height: 30px;
+    background-color: blanchedalmond;
+    margin-right: 30px;
+    margin-left: 10px;
+    border-radius: 50px;
+}
+
+#name{
+    color: white;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 20px;
+}
+
+#trash{
+    width: 30px;
+    height: 30px;
+    background-color: rgb(255, 0, 0);
+    margin-right: 30px;
+    margin-left: 10px;
+    border-radius: 50px;
+}
+
+#logo-name{
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+}
