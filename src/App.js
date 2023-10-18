@@ -11,30 +11,28 @@ function App() {
     'Cesar',
     'Brandon',
     'Estefania',
-    'panfilo',
+    'Panfilo',
   ];
 
   const [users,setUsers] = useState(initialUsers);
-  const searchUsers = users;
-  
+  const [saveUsers,setsaveUsers] = useState(users);
 
   function eliminar(indiceSeleccionado){
-    const newUsers = users.filter((_,i) => i !== indiceSeleccionado)
-    setUsers(newUsers)
-    return null
+    const newUsers = users.filter((_,i) => i !== indiceSeleccionado);
+    setsaveUsers(newUsers);
+    setUsers(newUsers);
   }
 
   function reset(){
     setUsers(initialUsers);
+    setsaveUsers(initialUsers);
+
   }
 
   function handleSearch(texto) {
-    if (texto === "") {
-      reset()
-    } else {
-      const newUsers = users.filter((name) => name.toLowerCase().includes(texto.toLowerCase()));
+      console.log(saveUsers);
+      const newUsers = saveUsers.filter((name) => name.toLowerCase().includes(texto.toLowerCase()));
       setUsers(newUsers)
-    }
   }
 
   return (
