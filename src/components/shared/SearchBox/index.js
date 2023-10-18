@@ -1,10 +1,12 @@
 import './SearchBox.css';
 
-function SearchBox() {
+function SearchBox({handleSearch}) {
+  
+  
   return (
     <div id="search-box">
       <div id="icon"></div>
-      <input id="text" placeholder="Search" />
+      <input onChange={(event) => handleSearch(event.target.value)} id="text" placeholder="Search" />
     </div>
   );
 }
