@@ -1,20 +1,19 @@
 import "./Card.css"
 
 const Card = ({
-    name = 'Name',
-    indice,
+    elemento,
     handleClick,
 }) => {
 
     function executeHandleClick() {
-        handleClick(indice)
+        handleClick(elemento)
     }
 
     return(
         <div className="card">
             <div id="logo-name">
                 <div id="card-logo"> </div>
-                <div id="name">{name}</div>
+                <div id="name">{elemento.name}</div>
             </div>
             <div id="trash" onClick={executeHandleClick} ></div> {/* onClick(recibe una funcion)*/}
         </div>
